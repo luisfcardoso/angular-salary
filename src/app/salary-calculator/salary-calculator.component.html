@@ -1,0 +1,24 @@
+<label>
+  Desired net salary:
+  <input [formControl]="salary" currencyMask (keyup)="calculateGrossSalary()"/>
+</label>  
+
+<p>
+  Gross salary: {{ grossSalary | currency: 'USD' }}
+</p>
+
+<p>
+  Brazilian social security (Base INSS): {{ baseINSS | currency: 'USD' }}
+</p>
+
+<p>
+  Brazilian social security's deduction (Desconto INSS): {{ inssDeduction | currency: 'USD' }}
+</p>
+
+<p>
+  Brazilian income tax (Base IRPF): {{ baseIRPF | currency: 'USD' }}
+</p>
+
+<p>
+  Brazilian income tax's deduction (Desconto IRPF): {{ irpfDeduction | currency: 'USD' }}
+</p>
